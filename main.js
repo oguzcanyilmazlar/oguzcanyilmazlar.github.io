@@ -5,7 +5,7 @@ const fakeMouse = document.getElementById("fake_mouse");
 
 button.onclick = () => {
     console.log(textBox.value);
-    copyArea.value = "https://oguzcanyilmazlar.github.io/?q=" + encodeURIComponent(textBox.value);
+    copyArea.value = "https://oguzcanyilmazlar.github.io/?q=" + encodeURI(textBox.value);
     copyArea.classList.remove("hidden");
 }
 
@@ -35,7 +35,7 @@ doAnim = (url) => {
       
       
     
-    fakeMouse.animate(animation, animationTiming).onfinish = () => {window.location.replace("http://www.google.com/search?q=" + text);}
+    fakeMouse.animate(animation, animationTiming).onfinish = () => {window.location.replace("http://www.google.com/search?q=" + encodeURI(text));}
 
 }
 
