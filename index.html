@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>LMGFY</title>
+</head>
+<body>
+
+    <img id='fake_mouse' src='assets/mouse_arrow.png' class="hidden absolute top-0 left-0" />
+    
+    <div class="flex flex-col h-screen justify-between">
+        <main class="flex items-center flex-col pb-16 mt-16">
+            <div href="https://google.com" class="text-8xl flex flex-row font-bold">
+                <a class="text-blue-700">G</a><a class="text-red-700">o</a><a class="text-yellow-500">g</a><a class="text-blue-700">g</a><a class="text-green-700">l</a><a class="text-red-700">e</a>
+            </div>
+            <input id="textbox" type="text" class="rounded-full border-gray-200 border-2 mt-20 w-4/12 h-14 text-lg px-4 hover:shadow-md focus:border-gray-200"></input>
+            <button id="link-button" type="button" class="bg-gray-100 text-gray-700 mt-8 px-8 py-2 rounded-md text-md hover:shadow-lg">Linki kopyala</button>
+            <input id="link-text" type="text" class="hidden bg-slate-400 text-white p-2 mt-4 rounded-md" readonly="readonly" value="" onclick="this.select();"></input>
+        </main>
+        <footer class="text-gray-400 h-10 flex flex-col items-center">
+            <p>Google'la alakası yok sitenin.</p>
+        </footer>
+    </div>
+
+    
+
+    <script src="main.js"></script>
+</body>
+</html>
