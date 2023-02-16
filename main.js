@@ -5,7 +5,7 @@ const fakeMouse = document.getElementById("fake_mouse");
 
 button.onclick = () => {
     console.log(textBox.value);
-    copyArea.value = "https://oguzcanyilmazlar.github.io/?q=" + textBox.value;
+    copyArea.value = "https://oguzcanyilmazlar.github.io/?q=" + encodeURIComponent(textBox.value);
     copyArea.classList.remove("hidden");
 }
 
@@ -18,7 +18,6 @@ doAnim = (url) => {
     const urlParams = new URLSearchParams(url);
     if(!urlParams.has("q")) return;
     const text = urlParams.get("q");
-    console.log(button.value);
     button.textContent = "Ara!";
     textBox.value = text;
     fakeMouse.classList.remove("hidden");
