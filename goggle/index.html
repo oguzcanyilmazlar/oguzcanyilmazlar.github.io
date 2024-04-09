@@ -8,7 +8,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://oguzcanyilmazlar.github.io/goggle" />
     <meta property="og:description" content="Üşenenler için otomatik google sitesi" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
     <title>LMGFY</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
             </div>
             <input id="textbox" type="text" class="rounded-full border-gray-200 border-2 mt-20 w-4/12 h-14 text-lg px-4 hover:shadow-md focus:border-gray-200"></input>
             <button id="link-button" type="button" class="bg-gray-100 text-gray-700 mt-8 px-8 py-2 rounded-md text-md hover:shadow-lg">Linki kopyala</button>
-            <input id="link-text" type="text" class="hidden bg-slate-400 text-white p-2 mt-4 rounded-md" readonly="readonly" value="" onclick="this.select();"></input>
+            <input id="link-text" type="text" class="hidden  text-white p-2 mt-4 rounded-md bg-zinc-400" readonly="readonly" value="" onclick="this.select();"></input>
         </main>
         <footer class="text-gray-400 h-10 flex flex-col items-center">
             <p>Google'la alakası yok sitenin.</p>
@@ -31,6 +32,6 @@
 
     
 
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@ const fakeMouse = document.getElementById("fake_mouse");
 
 button.onclick = () => {
     console.log(textBox.value);
-    copyArea.value = "https://oguzcanyilmazlar.github.io/?q=" + encodeURI(textBox.value);
+    copyArea.value = "https://oguzcanyilmazlar.github.io/goggle/?q=" + encodeURI(textBox.value);
     copyArea.classList.remove("hidden");
 }
 
