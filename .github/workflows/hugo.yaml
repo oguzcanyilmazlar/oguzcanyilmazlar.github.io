@@ -41,9 +41,6 @@ jobs:
           fetch-depth: 0
       - name: CD into submodule
         run: "cd acablade-handbook"
-      - name: Current dir
-        working-directory: ./acablade-handbook
-        run: echo "$PWD"
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
@@ -56,17 +53,18 @@ jobs:
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
+        working-directory: ./acablade-handbook
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
           TZ: America/Los_Angeles
         run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Copy Hugo Build
-        run: mkdir -p ../handbook && cp -R ./public/ ../handbook/
+        run: mkdir -p ./handbook && cp -R ./acablade-handbook/public/ ./handbook/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ../
+          path: ./
 
   # Deployment job
   deploy:
