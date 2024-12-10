@@ -42,6 +42,7 @@ jobs:
       - name: CD into submodule
         run: "cd acablade-handbook"
       - name: Current dir
+        working-directory: ./acablade-handbook
         run: echo "$PWD"
       - name: Install Hugo CLI
         run: |
