@@ -58,7 +58,7 @@ jobs:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
           TZ: America/Los_Angeles
-        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/handbook/"
       - name: Copy Hugo Build
         run: mkdir -p ./handbook && cp -R ./acablade-handbook/public/. ./handbook/
       - name: List
