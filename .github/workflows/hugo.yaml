@@ -60,13 +60,13 @@ jobs:
           TZ: America/Los_Angeles
         run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Copy Hugo Build
-        run: mkdir -p ./handbook && cp -R ./acablade-handbook/public/ ./handbook/
+        run: mkdir -p ./handbook && cp -R ./acablade-handbook/public/. ./handbook/
       - name: List
         run: ls
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./handbook/
+          path: ./
 
   # Deployment job
   deploy:
